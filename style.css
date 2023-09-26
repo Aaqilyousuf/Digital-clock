@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@500&display=swap');
+@font-face{
+    font-family: digital-7;
+    src: url(digital-7.ttf);
+}
+:root{
+    --light-color:#fb072b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inspiration', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #27374D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    gap: 50px;
+}
+h2{
+    color: #D5FFE4;
+    font-size: 50px;
+    font-weight: 400;
+}
+.frame{
+    width: 500;
+    height: 200px;
+    background-color: #111;
+    border:40px solid #D5FFE4;
+    
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 80px;
+    text-align: center;
+    line-height: 200px;
+    box-shadow: 0px 4px 16px rgba(17,17,26,0.05),
+                0px 8px 32px rgba(17, 17, 26, 0.05) ;
+}
+.clock{
+    font-family: digital-7;
+    color: #fff;
+    text-shadow: 0px 0px 20px var(--light-color);
+    position: relative;
+}
+
+.clock::before{
+    content:'';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: var(--light-color);
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    filter: blur(40px);
+}
